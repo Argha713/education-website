@@ -15,6 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:
                 wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+
+    <!-- Swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -140,7 +144,7 @@
                 <div class="course__image">
                     <img src="./images/course2.jpg">
                 </div>
-                <div class="course_info">
+                <div class="course__info">
                     <h4>Responsive Smart Home Website Design</h4>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid error, quaerat saepe suscipit
                         delectus possimus!</p>
@@ -283,10 +287,10 @@
     <!--=====================================END OF FAQs==================================-->
 
 
-    <section class="container testimonials__container">
+    <section class="container testimonials__container mySwiper">
         <h2>Student's Testimonials</h2>
-        <div>
-            <article class="testimonial">
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar1.jpg">
                 </div>
@@ -302,7 +306,7 @@
                     </p>
                 </div>
             </article>
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar2.jpg">
                 </div>
@@ -318,7 +322,7 @@
                     </p>
                 </div>
             </article>
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar3.jpg">
                 </div>
@@ -334,7 +338,7 @@
                     </p>
                 </div>
             </article>
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar4.jpg">
                 </div>
@@ -350,7 +354,7 @@
                     </p>
                 </div>
             </article>
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar5.jpg">
                 </div>
@@ -366,7 +370,7 @@
                     </p>
                 </div>
             </article>
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar6.jpg">
                 </div>
@@ -382,7 +386,7 @@
                     </p>
                 </div>
             </article>
-            <article class="testimonial">
+            <article class="testimonial swiper-slide">
                 <div class="avatar">
                     <img src="./images/avatar7.jpg">
                 </div>
@@ -399,9 +403,57 @@
                 </div>
             </article>
         </div>
+        
+    <div class="swiper-pagination"></div>
     </section>
 
- <!--=====================================END OF Testimonials==================================-->
+    <!--=====================================END OF Testimonials==================================-->
+
+
+    <footer>
+        <div class="container footer__cotainer">
+            <div class="footer__1">
+                <a href="index.html" class="footer__logo"><h4>Education Website</h4></a>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nobis et earum, excepturi eaque modi.
+                </p>
+            </div>
+            <div class="footer__2">
+                <h4>Permalinks</h4>
+                <ul class="permalinks">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer__3">
+                <h4>Primacy</h4>
+                <ul class="privacy">
+                    <li><a href="#">Privacy Policy</a></li>                    
+                    <li><a href="#">Terms and conditions</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer__4">
+                <h4>Contact Us</h4>
+                <div>
+                    <p>+91 9903136302</p>
+                    <p>sarkar.argha2@gmail.com</p>
+                </div>
+                <ul class="footer__socials">
+                    <li><a href="#"><i class="uli uli-facebook-f"></i></a></li>                    
+                    <li><a href="#"><i class="uli uli-instagram-alt"></i></a></li>
+                    <li><a href="#"><i class="uli uli-twitter"></i></a></li>
+                    <li><a href="#"><i class="uli uli-linkedin-alt"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            <small>Copyright &copy; Argha Sarkar(sarkar.argha2@gmail.com)</small>
+        </div>
+    </footer>
 
 
 
@@ -411,11 +463,27 @@
 
 
 
-
-
-
-
+    <!--Swiper js Script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./main.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          //when window width more than 600px
+          breakpoints:{
+            600:{
+                slidesPerView: 2,
+            }
+          }
+        });
+      </script>
+
 </body>
 
 </html>
